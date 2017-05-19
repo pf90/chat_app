@@ -15,8 +15,12 @@ class ChatroomUser < ApplicationRecord
   # == Scopes ===============================================================
 
   # == Callbacks ============================================================
+  before_create :set_last_read
 
   # == Class Methods ========================================================
 
   # == Instance Methods =====================================================
+  def set_last_read
+    self.last_read_at = Time.zone.now
+  end
 end

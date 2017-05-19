@@ -5,7 +5,6 @@ handleVisibilityChange = ->
     App.last_read.update(chatroom_id)
     $strike.remove()
 
-
 $(document).on "turbolinks:load", ->
   $(document).on "click", handleVisibilityChange
 

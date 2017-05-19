@@ -8,5 +8,5 @@ App.last_read = App.cable.subscriptions.create "LastReadChannel",
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
 
-  update: (chatroom_id) ->
+  update: (chatroom_id)->
     @perform "update", {chatroom_id: chatroom_id}
